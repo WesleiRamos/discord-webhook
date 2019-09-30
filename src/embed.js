@@ -11,7 +11,7 @@ class EmbedBuilder {
    */
   getEmbed() {
     if (this.embed.author)
-      this.embed.author = this.getAuthor();
+      this.embed.author = this.embed.author.getAuthor();
 
     return this.embed;
   }
@@ -69,7 +69,11 @@ class EmbedBuilder {
    * @param {String} icon Footer icon
    */
   setFooter(text, icon) {
-    this.embed.footer = { text, icon_url: icon };
+    let footer = { text };
+    if (icon)
+      footer.icon_url = icon;
+
+    this.embed.footer = footer;
   }
 
   /**
