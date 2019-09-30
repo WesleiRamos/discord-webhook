@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "http://github.com/WesleiRamos/discord-webhook",
   "author": "Weslei Ramos <wesleiramos2@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
